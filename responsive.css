@@ -1,0 +1,982 @@
+
+ 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", system-ui;
+}
+
+/* .maincontainer {
+    width: 93%;
+    margin: 7%;
+    margin-top: 9%;
+    position: relative;
+} */
+.maincontainer {
+    width: 100%;
+    /* margin: 7%; */
+    
+    position: relative;
+}
+
+.fa-envelope, .fa-mobile-screen {
+    color: white;
+    padding-right: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+.ending {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.ending h3 {
+    width: 230px;
+    border: 1px solid green;
+    border-radius: 20%;
+    padding: 10px;
+    height: 85px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.main {
+    width: 90%;
+    height: 30px;
+    background-color: blue;
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+small {
+    color: white;
+    margin: 10px;
+}
+
+.fa-brands {
+    color: white;
+    padding-left: 20px;
+}
+
+/* .navingation {
+   position:sticky;
+   top:0;
+    background-color: white;
+    box-shadow: 0px 2px 10px black;
+    width: 100%;
+    z-index: 10;
+}
+
+.navs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+} */
+
+.navs ul li {
+    display: inline-block;
+    padding: 10px 10px;
+    list-style: none;
+}
+
+.content {
+    width: 90%;
+    height: 386px;
+    padding-left: 3%;
+    padding-top: 10%;
+    background-image: url("https://media.istockphoto.com/id/814722594/photo/modern-building-modern-office-building-with-facade-of-glass.jpg?s=612x612&w=0&k=20&c=j7vKgG2m7zb7ES-IWTI3ExymZ95Dp1cq6bRlaCDjuPw=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content strong {
+    font-size: 50px;
+    color: black;
+}
+
+b {
+    color: blue;
+}
+
+.content h4 {
+    color: black;
+    font-size: 14px;
+}
+
+button {
+    padding: 9px 5px;
+    margin: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.content span {
+    color: black;
+    padding-left: 20px;
+}
+
+.fa-circle-play {
+    color: blue;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+    color: black;
+}
+
+/* //Initially hide the mobile menu */
+/* .nav-menu {
+    display: flex;
+    list-style: none;
+} */
+
+@media only screen and (max-width: 768px) {
+    .navs {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: none; 
+         flex-direction: row;
+       
+        position: static;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show the menu when active */
+    } 
+
+    .nav-menu li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .navs ul li {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+/* Optional: Add animation for the dropdown menu */
+.nav-menu.active {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .navs ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        height: 200px;
+        padding-top: 5%;
+    }
+
+    .content strong {
+        font-size: 40px;
+    }
+
+    .navs ul li {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navs h3 {
+        margin-bottom: 10px;
+    }
+
+    .navs ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .navs ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content strong {
+        font-size: 30px;
+    }
+
+    .content h4 {
+        font-size: 12px;
+    }
+
+    .content {
+        padding-left: 0;
+        background-size: cover;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .maincontainer, .navingation {
+        width: 100%;
+    }
+    #navbarNavDropdown
+    {
+        display: none;
+    }
+    .main {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .navs ul li {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .content strong {
+        font-size: 24px;
+    }
+
+    .content h4 {
+        font-size: 10px;
+    }
+
+    .content {
+        padding-left: 0;
+    }
+
+    button {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .fa-brands {
+        padding-left: 10px;
+    }
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", system-ui;
+}
+
+.maincontainer1 {
+    width: 93%;
+    margin: 7%;
+    margin-top: 9%;
+    position: sticky;
+    top: 0;
+}
+
+/* First section: header and content */
+.main {
+    width: 100%;
+    height: 30px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+}
+
+small {
+    color: white;
+    margin: 10px;
+}
+
+.fa-brands {
+    color: white;
+    padding-left: 20px;
+}
+
+/* Navigation styling */
+/* .navingation {
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    box-shadow: 0px 2px 10px black;
+    width: 100%;
+    z-index: 100;
+} */
+
+.navs {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+    color: black;
+}
+
+/* Content section */
+.content {
+    width: 100%;
+    height: 386px;
+    padding-left: 3%;
+    padding-top: 10%;
+    background-image: url("https://media.istockphoto.com/id/814722594/photo/modern-building-modern-office-building-with-facade-of-glass.jpg?s=612x612&w=0&k=20&c=j7vKgG2m7zb7ES-IWTI3ExymZ95Dp1cq6bRlaCDjuPw=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content strong {
+    font-size: 50px;
+    color: black;
+}
+
+.content h4 {
+    color: black;
+    font-size: 14px;
+}
+
+button {
+    padding: 9px 5px;
+    margin: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.content span {
+    color: black;
+    padding-left: 20px;
+}
+
+.fa-circle-play {
+    color: blue;
+}
+
+/* Second section styling */
+.secondpage {
+    background-color: rgb(221, 219, 219);
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    /* margin-top: 10%; */
+}
+
+.content1 {
+    height: auto;
+}
+
+.content1 span {
+    text-align: center;
+    display: block;
+    color: blue;
+}
+
+.content1 b {
+    text-align: center;
+    display: block;
+    position: relative;
+    bottom: 20px;
+}
+
+.content1 pre {
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.content1 strong {
+    color: blue;
+}
+
+.maincontent1 {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.maincontent1 img {
+    width: 300px;
+    height: 300px;
+}
+
+.box2 {
+    padding-left: 30px;
+}
+
+.box2 p {
+    font-size: 15px;
+}
+
+.box2 li {
+    list-style: none;
+    padding: 20px 20px;
+}
+
+.box2 small {
+    color: black;
+}
+
+.fa-shop,
+.fa-envira {
+    color: blue;
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+/* Responsive styles for mobile */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        position: fixed;
+        top:0;
+        top: 60px;
+        right: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* .hamburger {
+        display: block;
+    } */
+
+    .nav-menu li {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .maincontent1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .maincontent1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content strong {
+        font-size: 30px;
+    }
+
+    .content h4 {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+
+/* third page  */
+
+.thirdpage {
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 5%;
+}
+
+.content2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.content2 span {
+    font-size: 24px;
+    color: blue;
+}
+
+.content2 b {
+    font-size: 28px;
+    color: black;
+}
+
+.content2 pre {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Card Styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 32%; /* Each card takes up about 1/3 of the container's width */
+    margin: 10px 0;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card i {
+    font-size: 30px;
+    color: blue;
+    background: #d1d1d1;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .card {
+        width: 48%; /* 2 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width for each card on small screens */
+        margin: 10px 0;
+    }
+
+    .content2 span {
+        font-size: 22px;
+    }
+
+    .content2 b {
+        font-size: 26px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .card i {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content2 span {
+        font-size: 20px;
+    }
+
+    .content2 b {
+        font-size: 24px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 13px;
+    }
+
+    .card i {
+        font-size: 25px;
+    }
+}
+
+
+/* forth page */
+
+.fourthpage {
+    width: auto;
+    height: auto;
+    border: 2px solid grey;
+    margin-left: 6px;
+    background-color: rgb(238, 238, 238);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-bottom: 10%;
+}
+
+.content3 span {
+    text-align: center;
+    display: block;
+    color: blue;
+    padding-top: 10px;
+}
+
+.content3 b, pre {
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+.content11 {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content11 h2 {
+    font-size: 20px;
+}
+
+.content11 h5 {
+    font-size: 13px;
+}
+
+/* .boxs1, .boxs2, .boxs3, .boxs4 {
+    width: 265px;
+    height: auto;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: 10px;
+} */
+
+/* .boxs1 img, .boxs2 img, .boxs3 img, .boxs4 img {
+    width: 200px;
+    height: 300px;
+} */
+
+/* Media Queries for Responsiveness */
+
+/* Tablets (landscape) */
+@media screen and (max-width: 1024px) {
+    .content11 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Smartphones (portrait) */
+@media screen and (max-width: 768px) {
+    .content11 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxs1, .boxs2, .boxs3, .boxs4 {
+        width: 90%;
+        height: auto;
+    }
+
+    .boxs1 img, .boxs2 img, .boxs3 img, .boxs4 img {
+        width: 100%;
+        height: auto;
+    }
+
+    #navbarNavDropdown {
+        display: none;
+    }
+
+    .hiding-navbar {
+        display: none;
+    }
+}
+
+
+/* fifth page */
+
+
+.fifthpage {
+    width: 100%;
+    height: auto;
+    margin-left: 6px;
+    background-color: rgb(238, 238, 238);
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding-bottom: 10%;
+}
+
+.content4 span {
+    text-align: center;
+    display: block;
+    color: blue;
+    padding-top: 10px;
+}
+
+.content4 b, pre {
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+.conatnet123 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 81px;
+    margin-top: 20px;
+}
+
+.conatnet123 img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px grey;
+    transition: transform 0.3s ease;
+}
+
+.conatnet123 img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/* For tablets and smaller devices */
+@media screen and (max-width: 1024px) {
+    .conatnet123 img {
+        width: 45%;
+        height: auto;
+    }
+}
+
+/* For smartphones and smaller devices */
+@media screen and (max-width: 768px) {
+    .conatnet123 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conatnet123 img {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* fift page */
+
+.sixthpage {
+    margin-top: 10%;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+.content5 span {
+    text-align: center;
+    display: block;
+    color: blue;
+    padding-top: 10px;
+    font-size: 18px; /* Adjust font size for better readability */
+}
+
+.content5 b, pre {
+    text-align: center;
+    display: block;
+    font-size: 24px; /* Adjust font size for heading */
+}
+
+.box11 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.box11 h1 {
+    font-size: 20px;
+}
+
+.cont1, .cont2, .cont3 {
+    border-radius: 10%;
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%; /* Allows for 3-column layout on larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.maps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 8%;
+}
+
+.boss1, .boss2 {
+    margin: 10px;
+    flex-basis: 40%; /* Allows for 2-column layout on larger screens */
+}
+
+.boss2 {
+    background-color: white;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px grey;
+    padding: 20px;
+}
+
+.boss2 button {
+    border: 1px solid white;
+    background-color: blue;
+    padding: 10px 30px;
+    color: white;
+    margin: 10px 0;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+    .box11 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cont1, .cont2, .cont3 {
+        flex-basis: 90%; /* Full width for each box on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .maps {
+        flex-direction: column;
+    }
+
+    .boss1, .boss2 {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100%; /* Full width for maps */
+        height: 300px;
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+    .content5 span {
+        font-size: 16px;
+    }
+
+    .content5 b, pre {
+        font-size: 20px;
+    }
+
+    .cont1, .cont2, .cont3 {
+        padding: 15px;
+    }
+
+    .boss2 input, .boss2 textarea {
+        width: 100%; /* Full width inputs */
+    }
+
+    .boss2 button {
+        width: 100%;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
